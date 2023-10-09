@@ -6,22 +6,33 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
+    
+    @StateObject var profileVM = ProfileViewModel()
+    var user: User
+    
     var body: some View {
         VStack{
-            // Header
             VStack{
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .foregroundColor(Color(.systemGray4))
-                Text("Ramdhas Munirathinam")
+                PhotosPicker(selection: $profileVM.selectedItem) {
+                    if let profileImage = profileVM.profileImage {
+                        profileImage
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .scaledToFill()
+                            .clipShape(Circle())
+                        
+                    } else {
+                        CircleProfileImageView(user: user, size: .large)
+                    }
+                }
+                Text(user.fullName)
                     .font(.title2)
                     .fontWeight(.semibold)
             }
             
-            //List
             List{
                 Section {
                     ForEach(SettingOptionsViewModel.allCases, id: \.self) { option in
@@ -56,5 +67,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: User.MOCK_USER)
 }
