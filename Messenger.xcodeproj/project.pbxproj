@@ -57,6 +57,7 @@
 		54CE31762AD3FEDC00D952D7 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE31752AD3FEDC00D952D7 /* ChatMessageCell.swift */; };
 		54CE31782AD4055300D952D7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE31772AD4055300D952D7 /* ChatBubble.swift */; };
 		54D1242D2AD1E9EE003608AB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D1242C2AD1E9EE003608AB /* ProfileView.swift */; };
+		54E2FBDF2AD7FB0800402C5D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2FBDE2AD7FB0800402C5D /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		54CE31752AD3FEDC00D952D7 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		54CE31772AD4055300D952D7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		54D1242C2AD1E9EE003608AB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		54E2FBDE2AD7FB0800402C5D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		549D5A022AC4C1BC00B56F3D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				54E2FBDE2AD7FB0800402C5D /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				54CE31782AD4055300D952D7 /* ChatBubble.swift in Sources */,
 				54B99EFD2ACECC0100935AC1 /* InboxView.swift in Sources */,
 				5413F3D22AD1EF98000603BD /* SettingOptionsViewModel.swift in Sources */,
+				54E2FBDF2AD7FB0800402C5D /* UserService.swift in Sources */,
 				5446925B2AD31A2A003183B6 /* ProfileViewModel.swift in Sources */,
 				54B99EFF2ACED3CC00935AC1 /* ActiveNowView.swift in Sources */,
 				549D59F42AC4C1AA00B56F3D /* MessengerApp.swift in Sources */,
