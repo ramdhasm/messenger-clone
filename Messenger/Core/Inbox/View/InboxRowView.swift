@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InboxRowView: View {
+    
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             CircleProfileImageView(user: User.MOCK_USER, size: .large)

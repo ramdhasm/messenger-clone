@@ -11,6 +11,12 @@ struct InboxView: View {
     
     @State var showMessageView = false
     @State var user = User.MOCK_USER
+    @StateObject private var vm = InboxViewModel()
+    
+    private var currentUser: User? {
+        return vm.currentUser
+    }
+    
     var body: some View {
         NavigationStack {
             ScrollView  {
@@ -33,8 +39,8 @@ struct InboxView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
-                        NavigationLink(value: user) {
-                            CircleProfileImageView(user: user, size: .xSmall)
+                        NavigationLink(value: currentUser) {
+                            CircleProfileImageView(user: currentUser, size: .xSmall)
                         }
                         Text("Chats")
                             .font(.title)
